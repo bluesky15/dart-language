@@ -15,11 +15,11 @@ class Order {
   }
 
   getInfo() {
-    return 'Your order information:' +
-        '\n----------------------------' +
-        '\n Id: $_id' +
-        '\n Reference: $_reference' +
-        '\n Date: $_date' +
-        '\n---------------------------';
+    return '''Your order information:
+        ----------------------------
+        Id: $_id
+        Reference: $_reference
+        Date: $_date
+        ---------------------------''';
   }
 }
