@@ -4,11 +4,11 @@ main() {
 }
 
 class Order {
-  var id;
-  var reference;
-  var date;
+  var _id;
+  var _reference;
+  var _date;
 
-  Order(this.id, this.reference, this.date) {
+  Order(this._id, this._reference, this._date) {
     // this.id = id;
     // this.reference = reference;
     // this.date = date;
@@ -17,9 +17,9 @@ class Order {
   getInfo() {
     return 'Your order information:' +
         '\n----------------------------' +
-        '\n Id: $id' +
-        '\n Reference: $reference' +
-        '\n Date: $date' +
+        '\n Id: $_id' +
+        '\n Reference: $_reference' +
+        '\n Date: $_date' +
         '\n---------------------------';
   }
 }
