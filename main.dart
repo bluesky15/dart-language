@@ -3,6 +3,8 @@ main() {
   var order2 = Order.local(2, 'ref1', codeName: "dartRocks", name: "village road");
   print(order1.getInfo());
   print(order2.getInfo());
+  print("abc".encoded);
+  print("abc".encoded.decode);
 }
 
 class Order {
@@ -31,5 +33,27 @@ class Order {
         Date: $date
         CodeName:$codeName
         ---------------------------''';
+  }
+}
+
+//extension method
+
+extension StringEncoding on String{
+  String get encoded {
+    final output = StringBuffer();
+    for(final codePoint in runes){
+      output.writeCharCode(codePoint+1);
+    }
+    return output.toString();
+  }
+}
+
+extension  on String{
+  String get decode {
+    final output = StringBuffer();
+    for(final codePoint in runes){
+      output.writeCharCode(codePoint-1);
+    }
+    return output.toString();
   }
 }
